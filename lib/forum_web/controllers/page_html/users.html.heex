@@ -1,0 +1,11 @@
+<h1> Hey Gabe this is a Users page! </h1>
+
+<!-- 
+    This uses the template engine EEx (Embedded elixir) this allows for basic formatting of elixir code that will eventually be turned just into html. 
+    The <%=%> syntax is used to embed Elixir expressions into the template.
+ -->
+<ul>
+    <%= for user <- @users do %> 
+    <li><%= user.name %> - <%= user.email %></li> 
+    <% end %>
+</ul>
